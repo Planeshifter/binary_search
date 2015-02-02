@@ -25,7 +25,7 @@ USER_DIR = src
 CPPFLAGS += -isystem $(GTEST_DIR)/include
 
 # Flags passed to the C++ compiler.
-CXXFLAGS += -g -Wall -Wextra -pthread
+CXXFLAGS += -g -Wall -Wextra -pthread -std=c++11
 
 # All tests produced by this Makefile.  Remember to add new tests you
 # created to the list.
@@ -87,4 +87,7 @@ binarySearch-tests : binarySearch.o binarySearch-tests.o gtest_main.a
 binarySearch-cli : binarySearch.o main.o
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
 
-all: binarySearch-tests binarySearch-cli 
+all: binarySearch-tests binarySearch-cli
+
+clear:
+	rm binarySearch-tests binarySearch-cli  *.o
