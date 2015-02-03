@@ -13,7 +13,7 @@ from the terminal.
 
 ## Instructions
 
-Run the tests by opening
+Run the tests by running
 
 ```
 ./binarySearch-tests
