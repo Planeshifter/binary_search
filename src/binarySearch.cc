@@ -2,6 +2,18 @@
 
 using namespace std;
 
+/*
+binary search:
+returns index for @query element in input array @seq, -1 if not contained.
+
+parameters:
+@seq: sorted array of C type array. use of templates => supports arbitrary data types
+for which operators "==" and "<" are defined
+@query: element which has to be searched for, must be of same data type as elements
+in @seq
+@first: index of first element of array
+@last: index of last element of array
+*/
 template <typename T>
 int binary_search(T seq[], T query, int first, int last){
 
@@ -20,6 +32,19 @@ int binary_search(T seq[], T query, int first, int last){
   }
 }
 
+
+/*
+binary search:
+returns index for @query element in input array @seq, -1 if not contained.
+
+parameters:
+@seq: sorted array of C++ vector containers. use of templates => supports
+arbitrary data types for which operators "==" and "<" are defined
+@query: element which has to be searched for, must be of same data type as elements
+in @seq
+@first: index of first element of array
+@last: index of last element of array
+*/
 template <typename T>
 int binary_search(vector<T> seq, T query, int first, int last){
 
